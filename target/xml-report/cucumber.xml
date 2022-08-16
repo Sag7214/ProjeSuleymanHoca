@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="3.445">
-    <testcase classname="test api" name="Rooms api with GET request / Room api testing" time="3.203">
-        <system-out>
-            <![CDATA[Given kullanici roomlar icin get request yapar..............................passed
-And kullanici gelen room detayi deserialize eder............................passed
-Then kullanici room datasini validate eder..................................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.661">
+    <testcase classname="appointments test" name="appointments data read" time="0.531">
+        <failure message="Base URI cannot be null" type="java.lang.IllegalArgumentException">
+            <![CDATA[Given kullanici appointments icin get request yapar.........................failed
+And kullanici appointments bilgilerini deserialize eder.....................skipped
+Then kullanici appointments bilgilerini validate eder.......................skipped
+
+StackTrace:
+java.lang.IllegalArgumentException: Base URI cannot be null
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
+	at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:54)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:217)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:240)
+	at io.restassured.internal.RequestSpecificationImpl.baseUri(RequestSpecificationImpl.groovy:690)
+	at io.restassured.builder.RequestSpecBuilder.setBaseUri(RequestSpecBuilder.java:989)
+	at utilities.Authentication2.generateToken(Authentication2.java:22)
+	at stepDefinitions.API_stepdefinitions.Appointments2Steps.kullanici_appointments_icin_get_request_yapar(Appointments2Steps.java:25)
+	at ✽.kullanici appointments icin get request yapar(file:///C:/Users/adilg/IdeaProjects/ProjeSuleymanHoca/src/test/resources/features/api_resource/Appointments2.feature:7)
 ]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>
